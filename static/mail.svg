@@ -1,0 +1,11 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="25" fill="url(#paint0_radial)"/>
+<circle cx="25" cy="25" r="24.2021" stroke="black" stroke-opacity="0.1" stroke-width="1.59574"/>
+<path d="M13 16V33C13 33.5523 13.4477 34 14 34H36C36.5523 34 37 33.5523 37 33V16M13 16H37M13 16L24.337 26.0394C24.7155 26.3746 25.2845 26.3746 25.663 26.0394L37 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(42.9687 11.7187) rotate(136.332) scale(47.5216)">
+<stop stop-color="#2E81FF"/>
+<stop offset="1" stop-color="#2815FF"/>
+</radialGradient>
+</defs>
+</svg>
