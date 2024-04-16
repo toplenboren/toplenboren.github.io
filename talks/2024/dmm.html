@@ -11,15 +11,88 @@
     <link rel="icon" href="static/icon.ico">
 </head>
 <body>
-<section class="centered-container">
-    <pre>Эта страница еще программируется</pre>
+<section class="container">
     <h1>XZ</h1>
-    <h2>Лекторий ДММ 2024</h2>
-    <h3>1. Как проверить, что ваш XZ нормальной версии</h3>
-    <h3>2. Слайды</h3>
-    <h3>3. Что делать с зависимостями?</h3>
-    <h3>4. Как попробовать Open Source</h3>
-    <h3>5. Источники</h3>
+    <h2>Лекторий ДММ 2024, <a href="https://docs.google.com/presentation/d/12WWBGGwdyAbzwg64zwv_xknZ6AgycOiKVNvMtkYV0Y0/edit?usp=sharing" target="_blank">слайды</a></h2>
+    <h3>Как проверить, что ваш XZ нормальной версии</h3>
+    <p>Запустите одну из этих команд. Если версия XZ 5.6.0 или 5.6.1 – откатывайтесь</p>
+    <h4>Mac</h4>
+    <pre>brew info xz</pre>
+    <h4>Debian</h4>
+    <pre>dpkg -l | grep xz-utils</pre>
+    <h4>Red Hat</h4>
+    <pre>rpm -qi xz</pre>
+    <h4>Еще:</h4>
+    <pre>apt show xz-utils</pre>
+    <h3>Как писать issue и багрепорты в Open Source</h3>
+    <p>
+        <a href="https://opensource.how">Opensource.how</a>
+    </p>
+    <h3>Какие проекты потрогать:</h3>
+    <p>Если вы студент и вам нужен open-source опыт, то я рекомендую небольшие проекты, на которых вас поменторят. Еще такие проекты можно закрывать как практку на мат-мехе! Вот несколько примеров проектов:</p>
+    <h4><a href="https://github.com/hplush/slowreader">slowreader</a></h4>
+    <p>Опенсорсная local-first читалка RSS фидов, Typescript. Отлично для новичков</p>
+    <h4><a href="https://github.com/open-condo-software/gitexporter">gitexporter</a></h4>
+    <p>Утилита для копирования репозитория с подмодулями. Bash, Поменторю я</p>
+    <h4><a href="https://github.com/toplenboren/simple-git-hooks">simple-git-hooks</a></h4>
+    <p>Утилита для установки git-hooks в js проектах. Поменторю я</p>
+    <h4><a href="https://github.com/open-condo-software/open-condo-platform">Open Condo Software</a></h4>
+    <p>опенсорсная система для управления недвижимостью. Поменторю я</p>
+    <h3>Где еще искать крутые опенсорс задачи?</h3>
+    <h4>Спецкурс по open source на матмехе</h4>
+    <p>Следите за объявлениями. Пока я учлися спецкурс был :)</p>
+    <h4><a href="https://summerofcode.withgoogle.com/">Google Summer Of Code</a></h4>
+    <p>Ежегодная школа open source разработки от гугла. Можно поработать в википедии или вебархиве. Много ML/AI исследований. Прием на этот год уже завершился</p>
+    <h4><a href="https://cultofmartians.com/">Cult Of Martians</a></h4>
+    <p>Опенсорсные задачки от компании Evil Martians</p>
+    <h3>Источники</h3>
+    <ul>
+        <li>
+            <a href="https://github.com/tukaani-project/xz" target="_blank" rel="noopener">Репозиторий XZ-Utils (С)</a>
+        </li>
+        <li>
+            <a href="https://github.com/tukaani-project/xz/commit/cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0" target="_blank" rel="noopener">Коммит с бэкдором (C)</a>
+        </li>
+        <li>
+            <a href="https://www.mail-archive.com/xz-devel@tukaani.org/msg00567.html" target="_blank" rel="noopener">Архивы электронной почты Lasse Collin (EN)</a>
+        </li>
+        <li>
+            <a href="https://gist.github.com/thesamesam/223949d5a074ebc3dce9ee78baad9e27" target="_blank" rel="noopener">XZ backdoor response from one of Lasse Collin colleagues (EN)</a>
+        </li>
+        <li>
+            <a href="https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/" target="_blank" rel="noopener">Event Stream Backdoor (EN)</a>
+        </li>
+        <li>
+            <a href="https://snyk.io/blog/typosquatting-attacks/" target="_blank" rel="noopener">Crossenv hack and other Typesquatting attacks (EN)</a>
+        </li>
+    </ul>
+    <h3>Благодарности</h3>
+    <p>Спасибо <a href="https://sitnik.ru">Андрею Ситнику</a> за помощь в подготовке доклада!</p>
 </section>
+<style>
+    pre {
+        color: brown;
+        padding: 4px 0;
+        border: brown 1px;
+    }
+    
+    h3 {
+        font-weight: bold;
+        padding-top: 24px;
+    }
+
+    h2 {
+        padding-bottom: 24px;
+    }
+
+    section {
+        padding-top:64px;
+        padding-bottom: 128px;
+    }
+
+    h4 p {
+        color: #5d5d5d;
+    }
+</style>
 </body>
 </html>
