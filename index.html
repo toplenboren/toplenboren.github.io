@@ -4,77 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="index.css"/>
     <link rel="icon" href="static/icon.ico">
 
     <title>Mikhail Gorbunov</title>
   </head>
   <body>
-      <div class="centered-container">
-          <div class="strict-width">
-            <div class="main-picture">
-                <img src="https://avatars.githubusercontent.com/u/33755274?v=4"
-                height="300px" 
-                width="300px"
+      <div class="container">
+          <div class="main-picture">
+                <img src="static/image.png"
+                height="150px"
+                width="150px"
                 alt="Just my photo">
             </div>
-            <h1>Mikhail Gorbunov</h1>
-            <p>I code cool stuff for food</p>
-            
+            <div class="hero__text">
+                <h1>Mikhail Gorbunov</h1>
+                <p>I code cool stuff for food</p>
             </div>
-            <div class="link-row">
-                <div class="link-row__item">
-                    <a href="https://github.com/toplenboren" 
-                    target="_blanc" 
-                    rel="noopener noreferer">
-                        <img src="static/gh.svg" 
-                        alt="github.com logotype">
-                    </a>
-                </div>
-
-                <div class="link-row__item">
-                    <a href="https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%B3%D0%BE%D1%80%D0%B1%D1%83%D0%BD%D0%BE%D0%B2-05ab111a3/" 
-                    target="_blanc" 
-                    rel="noopener noreferer">
-                        <img src="static/in.svg" 
-                        alt="linkedin.com logotype">
-                    </a>
-                </div>
-
-                <div class="link-row__item">
-                    <a href="https://www.artstation.com/yonkers" 
-                    target="_blanc" 
-                    rel="noopener noreferer">
-                        <img src="static/as.svg" 
-                        alt="artstation.com logotype">
-                    </a>
-                </div>
-
-                <div class="link-row__item">
-                    <a href="mailto:toplenboren@gmail.com" 
-                    target="_blanc" 
-                    rel="noopener noreferer">
-                        <img src="static/mail.svg" 
-                        alt="mail services picture">
-                    </a>
-                </div>
-
-                <div class="link-row__item">
-                    <a href=" https://t.me/impsloader" 
-                    target="_blanc" 
-                    rel="noopener noreferer">
-                        <img src="static/tg.svg" 
-                        alt="telegram logotype">
-                    </a>
-                </div>
+            <section class="stuff">
+                <h2 class="stuff__heading">Projects</h2>
+                <ul class="stuff__list">
+                    <li>
+                        <a href="https://github.com/toplenboren/simple-git-hooks" target="_blank" rel="noopener noreferrer">simple-git-hooks</a>
+                        <span class="stuff__desc">Simple zero-dependency git hooks manager for JS projects</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/open-condo-software/open-condo-platform" target="_blank" rel="noopener noreferrer">open-condo-platform</a>
+                        <span class="stuff__desc">Open source condominium management platform</span>
+                    </li>
+                </ul>
+            </section>
+            <div class="primary-contact">
+                <a class="primary-contact__email" href="mailto:toplenboren@gmail.com">toplenboren@gmail.com</a>
             </div>
+            <nav class="links">
+                <a class="links__item" href="https://github.com/toplenboren" target="_blank" rel="noopener noreferrer">github</a>
+                <a class="links__item" href="https://www.linkedin.com/in/toplenboren/" target="_blank" rel="noopener noreferrer">linkedin</a>
+                <a class="links__item" href="https://www.artstation.com/yonkers" target="_blank" rel="noopener noreferrer">artstation</a>
+                <a class="links__item" href="https://t.me/impsloader" target="_blank" rel="noopener noreferrer">telegram</a>
+            </nav>
       </div>
-    
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
