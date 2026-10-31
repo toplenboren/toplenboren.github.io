@@ -2,52 +2,129 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mikhail Gorbunov — software engineer building applied AI systems at doma.ai">
+
     <link rel="stylesheet" href="index.css"/>
     <link rel="icon" href="static/icon.ico">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 
     <title>Mikhail Gorbunov</title>
   </head>
   <body>
-      <div class="container">
-          <div class="main-picture">
-                <img src="static/image.png"
-                height="150px"
-                width="150px"
-                alt="Just my photo">
-            </div>
-            <div class="hero__text">
-                <h1>Mikhail Gorbunov</h1>
-                <p>I code cool stuff for food</p>
-            </div>
-            <section class="stuff">
-                <h2 class="stuff__heading">Projects</h2>
-                <ul class="stuff__list">
-                    <li>
-                        <a href="https://github.com/toplenboren/simple-git-hooks" target="_blank" rel="noopener noreferrer">simple-git-hooks</a>
-                        <span class="stuff__desc">Simple zero-dependency git hooks manager for JS projects</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/open-condo-software/open-condo-platform" target="_blank" rel="noopener noreferrer">open-condo-platform</a>
-                        <span class="stuff__desc">Open source condominium management platform</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/toplenboren/ru-prop-management-eval" target="_blank" rel="noopener noreferrer">ru-prop-management-eval</a>
-                        <span class="stuff__desc">How modern LLMs answer russian property management questions</span>
-                    </li>
-                </ul>
-            </section>
-            <div class="primary-contact">
-                <a class="primary-contact__email" href="mailto:toplenboren@gmail.com">toplenboren@gmail.com</a>
-            </div>
-            <nav class="links">
-                <a class="links__item" href="https://github.com/toplenboren" target="_blank" rel="noopener noreferrer">github</a>
-                <a class="links__item" href="https://www.linkedin.com/in/toplenboren/" target="_blank" rel="noopener noreferrer">linkedin</a>
-                <a class="links__item" href="https://www.artstation.com/yonkers" target="_blank" rel="noopener noreferrer">artstation</a>
-                <a class="links__item" href="https://t.me/impsloader" target="_blank" rel="noopener noreferrer">telegram</a>
-            </nav>
-      </div>
+    <main class="page">
 
+      <header class="hero">
+        <img class="hero__avatar" src="static/avatar2.jpg" width="131" height="131" alt="Mikhail Gorbunov">
+        <h1 class="hero__title">Hi, I&#8217;m Michael,<br>a software engineer<span>I currently build applied AI<br>systems at <a href="https://doma.ai" target="_blank" rel="noopener noreferrer">doma.ai</a></span></h1>
+        <nav class="links" aria-label="Contacts">
+          <a href="mailto:toplenboren@gmail.com">toplenboren@gmail.com</a>
+          <a href="https://t.me/impsloader" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://github.com/toplenboren" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/toplenboren/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="cv.pdf">CV</a>
+        </nav>
+      </header>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3 class="card__title"><a href="projects/simple-git-hooks.html">simple-git-hooks</a></h3>
+            <p>Simple open source zero-dependency git hooks manager for JS projects. <a href="https://github.com/toplenboren/simple-git-hooks" target="_blank" rel="noopener noreferrer">1.7k stars on GitHub</a>, ~1m weekly and 40m+ total downloads on <a href="https://www.npmjs.com/package/simple-git-hooks" target="_blank" rel="noopener noreferrer">NPM</a>.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title"><a href="projects/open-condo.html">Doma.ai</a></h3>
+            <p>I helped build a popular open-source CRM for property management. It powers at least two working B2B SaaS Companies: <a href="https://doma.ai" target="_blank" rel="noopener noreferrer">Doma.ai</a> for CIS and Russia and <a href="https://unitify.com" target="_blank" rel="noopener noreferrer">Unitify.com</a> for worldwide – also my current workplace.</p>
+            <a class="media media--wide" href="projects/open-condo.html">
+              <img src="static/condo2.jpg" alt="open-condo platform — tickets control room" loading="lazy">
+            </a>
+          </article>
+          <article class="card">
+            <h3 class="card__title"><a href="projects/property-management-eval.html">property-management-eval</a></h3>
+            <p>I benchmarked 22 modern LLMs on curated unsaturated set of 125 real life questions from Russian property managers. Then I ran Closed book evaluations. OpenAI Sol took the pole. Best Russian models came second. <a href="https://toplenboren.github.io/ru-prop-management-eval/" target="_blank" rel="noopener noreferrer">Results and graphs</a>.</p>
+            <div class="media">
+              <iframe src="https://toplenboren.github.io/ru-prop-management-eval/" title="property-management-eval — live benchmark" loading="lazy"></iframe>
+            </div>
+          </article>
+        </div>
+        <article class="card feature">
+          <h3 class="card__title"><a href="talks/2025/3d-modelling.html">Is 3d modelling solved?</a></h3>
+          <p>Lets take SOTA open weight models for mesh generation, texturing and mesh reconstruction and try to apply them to real life problem of toy cars collecting.</p>
+          <div class="feature__pair">
+            <a class="feature__cell" href="talks/2025/3d-modelling.html"><img src="static/mclaren_src.jpg" alt="McLaren F1 toy car — photo used to generate the 3D model" loading="lazy"></a>
+            <span class="feature__arrow" aria-hidden="true">&#8594;</span>
+            <div class="model" id="car-model">
+              <model-viewer src="static/mclaren.glb"
+                            alt="Generated 3D model of a McLaren toy car"
+                            environment-image="neutral"
+                            camera-controls interaction-prompt="none"
+                            auto-rotate auto-rotate-delay="2000"
+                            shadow-intensity="1"
+                            loading="lazy"></model-viewer>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="talks">
+        <h2>Keynotes &amp; posts</h2>
+        <div class="grid">
+          <article class="card">
+            <h3 class="card__title"><a href="talks/2024/dmm.html">Anatomy of a supply chain attack</a></h3>
+            <p>Reconstructed the XZ Utils backdoor (CVE-2024-3094) for ~150 CS students — the two-year social-engineering campaign and the sshd hook hidden in test archives. UrFU, May 2024.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title"><a href="talks/2023/ucamp-zkp.html">ZKP in voting systems</a></h3>
+            <p>How to choose a name for an event — the core problem of electronic voting, anonymity with a correct count, and how zero-knowledge proofs solve it in Helios-style systems. U-Camp, Ka&#351;, Oct 2023.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title"><a href="talks/2024/jpegxl.html">Why is JPEG XL not winning?</a></h3>
+            <p>JPEG is old, and JPEG XL is 100% better, why are we not using it? What does it have to do with Chrome?</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="theme" role="group" aria-label="Theme">
+          <button type="button" data-theme="light">Light</button>
+          <button type="button" data-theme="dark">Dark</button>
+          <button type="button" data-theme="system">System</button>
+        </div>
+      </footer>
+
+    </main>
+    <script>
+      var m = document.getElementById('car-model'), sx = 0, sy = 0;
+      m.addEventListener('pointerdown', function (e) { sx = e.clientX; sy = e.clientY; });
+      m.addEventListener('pointerup', function (e) {
+        if (Math.hypot(e.clientX - sx, e.clientY - sy) < 6) m.classList.toggle('model--big');
+      });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.model').forEach(function (el) { io.observe(el); });
+
+      // footer theme switch
+      (function () {
+        var KEY = 'theme';
+        var root = document.documentElement;
+        var btns = document.querySelectorAll('.theme button');
+        var set = function (t) {
+          if (t === 'system') root.removeAttribute('data-theme');
+          else root.setAttribute('data-theme', t);
+          btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.theme === t ? 'true' : 'false'); });
+          try { localStorage.setItem(KEY, t); } catch (e) {}
+        };
+        var saved = 'system';
+        try { saved = localStorage.getItem(KEY) || 'system'; } catch (e) {}
+        set(saved);
+        btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.theme); }); });
+      })();
+    </script>
   </body>
 </html>
