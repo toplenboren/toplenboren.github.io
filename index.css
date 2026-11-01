@@ -114,6 +114,8 @@ h2 {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 2px;
     margin: 0;
 }
 .card p { margin: 0; }
@@ -124,7 +126,7 @@ h2 {
     display: block;
     margin-top: 8px;
 }
-.media img, .media iframe {
+.media img {
     display: block;
     width: 100%;
     height: auto;
@@ -137,6 +139,22 @@ h2 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .media--wide img { aspect-ratio: 480 / 352; }
+
+.media--frame {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.media--frame iframe {
+    display: block;
+    width: 133.33%;
+    height: 133.33%;
+    border: 0;
+    transform: scale(0.75);
+    transform-origin: top left;
+}
 
 /* ---------- full-width feature (before → after pair) ---------- */
 
