@@ -1,98 +1,107 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Mikhail Gorbunov | Лекторий ДММ 2024</title>
+<!doctype html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anatomy of a supply-chain attack — XZ Utils backdoor talk by Mikhail Gorbunov, ДММ 2024">
+
     <link rel="stylesheet" href="../../index.css"/>
     <link rel="icon" href="../../static/icon.ico">
-</head>
-<body>
-<section class="container">
-    <h1>XZ</h1>
-    <h2>Лекторий ДММ 2024, <a href="https://docs.google.com/presentation/d/12WWBGGwdyAbzwg64zwv_xknZ6AgycOiKVNvMtkYV0Y0/edit?usp=sharing" target="_blank">слайды</a></h2>
-    <h3>Как проверить, что ваш XZ нормальной версии</h3>
-    <p>Запустите одну из этих команд. Если версия XZ 5.6.0 или 5.6.1 – откатывайтесь</p>
-    <h4>Mac</h4>
-    <pre>brew info xz</pre>
-    <h4>Debian</h4>
-    <pre>dpkg -l | grep xz-utils</pre>
-    <h4>Red Hat</h4>
-    <pre>rpm -qi xz</pre>
-    <h4>Еще:</h4>
-    <pre>apt show xz-utils</pre>
-    <h3>Как писать issue и багрепорты в Open Source</h3>
-    <p>
-        <a href="https://opensource.how">Opensource.how</a>
-    </p>
-    <h3>Какие проекты потрогать:</h3>
-    <p>Если вы студент и вам нужен open-source опыт, то я рекомендую небольшие проекты, на которых вас поменторят. Еще такие проекты можно закрывать как практку на мат-мехе! Вот несколько примеров проектов:</p>
-    <h4><a href="https://github.com/hplush/slowreader">slowreader</a></h4>
-    <p>Опенсорсная local-first читалка RSS фидов, Typescript. Отлично для новичков</p>
-    <h4><a href="https://github.com/open-condo-software/gitexporter">gitexporter</a></h4>
-    <p>Утилита для копирования репозитория с подмодулями. Bash, Поменторю я</p>
-    <h4><a href="https://github.com/toplenboren/simple-git-hooks">simple-git-hooks</a></h4>
-    <p>Утилита для установки git-hooks в js проектах. Поменторю я</p>
-    <h4><a href="https://github.com/open-condo-software/open-condo-platform">Open Condo Software</a></h4>
-    <p>опенсорсная система для управления недвижимостью. Поменторю я</p>
-    <h3>Где еще искать крутые опенсорс задачи?</h3>
-    <h4>Спецкурс по open source на матмехе</h4>
-    <p>Следите за объявлениями. Пока я учлися спецкурс был :)</p>
-    <h4><a href="https://summerofcode.withgoogle.com/">Google Summer Of Code</a></h4>
-    <p>Ежегодная школа open source разработки от гугла. Можно поработать в википедии или вебархиве. Много ML/AI исследований. Прием на этот год уже завершился</p>
-    <h4><a href="https://cultofmartians.com/">Cult Of Martians</a></h4>
-    <p>Опенсорсные задачки от компании Evil Martians</p>
-    <h3>Источники</h3>
-    <ul>
-        <li>
-            <a href="https://github.com/tukaani-project/xz" target="_blank" rel="noopener">Репозиторий XZ-Utils (С)</a>
-        </li>
-        <li>
-            <a href="https://github.com/tukaani-project/xz/commit/cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0" target="_blank" rel="noopener">Коммит с бэкдором (C)</a>
-        </li>
-        <li>
-            <a href="https://www.mail-archive.com/xz-devel@tukaani.org/msg00567.html" target="_blank" rel="noopener">Архивы электронной почты Lasse Collin (EN)</a>
-        </li>
-        <li>
-            <a href="https://gist.github.com/thesamesam/223949d5a074ebc3dce9ee78baad9e27" target="_blank" rel="noopener">XZ backdoor response from one of Lasse Collin colleagues (EN)</a>
-        </li>
-        <li>
-            <a href="https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/" target="_blank" rel="noopener">Event Stream Backdoor (EN)</a>
-        </li>
-        <li>
-            <a href="https://snyk.io/blog/typosquatting-attacks/" target="_blank" rel="noopener">Crossenv hack and other Typesquatting attacks (EN)</a>
-        </li>
-    </ul>
-    <h3>Благодарности</h3>
-    <p>Спасибо <a href="https://sitnik.ru">Андрею Ситнику</a> за помощь в подготовке доклада!</p>
-</section>
-<style>
-    pre {
-        color: brown;
-        padding: 4px 0;
-        border: brown 1px;
-    }
-    
-    h3 {
-        font-weight: bold;
-        padding-top: 24px;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single&family=Martian+Mono:wght@700&display=swap" rel="stylesheet">
 
-    h2 {
-        padding-bottom: 24px;
-    }
+    <title>XZ — Mikhail Gorbunov</title>
+  </head>
+  <body>
+    <main class="page detail">
 
-    section {
-        padding-top:64px;
-        padding-bottom: 128px;
-    }
+      <p class="back"><a href="../../index.html#talks">← All talks</a></p>
 
-    h4 p {
-        color: #5d5d5d;
-    }
-</style>
-</body>
+      <header class="detail__head">
+        <h1>XZ<span class="tag">Sep 2024</span></h1>
+        <p class="detail__lede">Anatomy of a supply-chain attack — how a two-year social-engineering campaign ended in a backdoor inside XZ Utils (CVE-2024-3094). ДММ, Ekaterinburg.</p>
+      </header>
+
+      <div class="detail__media">
+        <img src="../../static/talk_xz.avif" alt="XZ (нас всех недавно чуть не взломали) — title slide" loading="lazy">
+        <p class="detail__media-caption"><a href="https://docs.google.com/presentation/d/12WWBGGwdyAbzwg64zwv_xknZ6AgycOiKVNvMtkYV0Y0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides (ru)</a></p>
+      </div>
+
+      <div class="detail__body">
+        <h3>How to check your XZ version</h3>
+        <p>Run one of these commands. If the version is 5.6.0 or 5.6.1 — roll back:</p>
+        <pre># Mac
+brew info xz
+# Debian
+dpkg -l | grep xz-utils
+# Red Hat
+rpm -qi xz
+# or
+apt show xz-utils</pre>
+
+        <h3>How to write issues and bug reports in open source</h3>
+        <p><a href="https://opensource.how" target="_blank" rel="noopener noreferrer">opensource.how</a></p>
+
+        <h3>Projects to start with</h3>
+        <p>If you are a student and need open-source experience, pick small projects where someone can mentor you. On mat-mekh these can also count as practical coursework:</p>
+        <h4><a href="https://github.com/hplush/slowreader">slowreader</a></h4>
+        <p>Open-source local-first RSS reader, TypeScript. Great for beginners.</p>
+        <h4><a href="https://github.com/open-condo-software/gitexporter">gitexporter</a></h4>
+        <p>Utility for copying a repository with submodules. Bash, I mentor.</p>
+        <h4><a href="https://github.com/toplenboren/simple-git-hooks">simple-git-hooks</a></h4>
+        <p>Utility for installing git hooks in JS projects. I mentor.</p>
+        <h4><a href="https://github.com/open-condo-software/open-condo-platform">Open Condo Software</a></h4>
+        <p>Open-source property-management platform. I mentor.</p>
+
+        <h3>Where else to find good open-source tasks</h3>
+        <h4>Open-source elective course at mat-mekh</h4>
+        <p>Watch for announcements — the course existed while I studied :)</p>
+        <h4><a href="https://summerofcode.withgoogle.com/" target="_blank" rel="noopener noreferrer">Google Summer of Code</a></h4>
+        <p>Annual open-source program from Google. Wikipedia, Internet Archive, lots of ML/AI research.</p>
+        <h4><a href="https://cultofmartians.com/" target="_blank" rel="noopener noreferrer">Cult of Martians</a></h4>
+        <p>Open-source tasks from Evil Martians.</p>
+
+        <h3>Sources</h3>
+        <ul>
+          <li><a href="https://github.com/tukaani-project/xz" target="_blank" rel="noopener noreferrer">XZ Utils repository (C)</a></li>
+          <li><a href="https://github.com/tukaani-project/xz/commit/cf44e4b7f5dfdbf8c78aef377c10f71e274f63c0" target="_blank" rel="noopener noreferrer">The backdoor commit (C)</a></li>
+          <li><a href="https://www.mail-archive.com/xz-devel@tukaani.org/msg00567.html" target="_blank" rel="noopener noreferrer">Lasse Collin's mail archives</a></li>
+          <li><a href="https://gist.github.com/thesamesam/223949d5a074ebc3dce9ee78baad9e27" target="_blank" rel="noopener noreferrer">XZ backdoor response from Lasse Collin's colleague</a></li>
+          <li><a href="https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/" target="_blank" rel="noopener noreferrer">Event Stream backdoor post-mortem</a></li>
+          <li><a href="https://snyk.io/blog/typosquatting-attacks/" target="_blank" rel="noopener noreferrer">Crossenv hack and other typosquatting attacks</a></li>
+        </ul>
+
+        <p>Thanks to <a href="https://sitnik.ru" target="_blank" rel="noopener noreferrer">Andrey Sitnik</a> for help preparing the talk!</p>
+
+        <hr class="detail__lang-sep">
+
+        <div lang="ru">
+          <h3>Как проверить, что ваш XZ нормальной версии</h3>
+          <p>Запустите одну из команд выше. Если версия XZ 5.6.0 или 5.6.1 — откатывайтесь.</p>
+
+          <h3>Как писать issue и багрепорты в open source</h3>
+          <p><a href="https://opensource.how">opensource.how</a></p>
+
+          <h3>Какие проекты потрогать</h3>
+          <p>Если вы студент и вам нужен open-source опыт, рекомендую небольшие проекты, на которых вас поменторят. Такие проекты можно закрывать как практику на мат-мехе — список выше.</p>
+
+          <h3>Где еще искать крутые опенсорс-задачи</h3>
+          <h4>Спецкурс по open source на матмехе</h4>
+          <p>Следите за объявлениями. Пока я учился, спецкурс был :)</p>
+          <h4><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a></h4>
+          <p>Ежегодная школа open-source разработки от Google. Можно поработать в Википедии или веб-архиве, много ML/AI-исследований.</p>
+          <h4><a href="https://cultofmartians.com/">Cult of Martians</a></h4>
+          <p>Опенсорсные задачки от компании Evil Martians.</p>
+
+          <h3>Источники</h3>
+          <p>Список ссылок — выше.</p>
+
+          <h3>Благодарности</h3>
+          <p>Спасибо <a href="https://sitnik.ru">Андрею Ситнику</a> за помощь в подготовке доклада!</p>
+        </div>
+      </div>
+
+    </main>
+  </body>
 </html>

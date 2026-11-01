@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Is 3D modelling solved? — talk by Mikhail Gorbunov">
+
+    <link rel="stylesheet" href="../../index.css"/>
+    <link rel="icon" href="../../static/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single&family=Martian+Mono:wght@700&display=swap" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+
+    <title>Is 3D modelling solved? — Mikhail Gorbunov</title>
+  </head>
+  <body>
+    <main class="page detail">
+
+      <p class="back"><a href="../../index.html#talks">← All talks</a></p>
+
+      <header class="detail__head">
+        <h1>Is 3D modelling solved?<span class="tag">2025</span></h1>
+        <p class="detail__lede">Turning toy-car photos into textured 3D models with TripoSG, Hunyuan Paint and Blender — about 10 minutes per model on a 5060 Ti.</p>
+      </header>
+
+      <div class="detail__media">
+        <div class="model in" style="height: 60vh; margin-top: 0">
+          <model-viewer src="../../static/mclaren.glb"
+                        alt="Generated 3D model of a McLaren toy car"
+                        environment-image="neutral"
+                        camera-controls auto-rotate auto-rotate-delay="1500"
+                        shadow-intensity="1"></model-viewer>
+        </div>
+        <p class="detail__media-caption">One of the models from the talk — generated from a photo, textured, drag to rotate</p>
+      </div>
+
+      <div class="detail__body">
+        <p>A practical pipeline: single photo → TripoSG geometry → texture pass in Hunyuan Paint → cleanup and rigging in Blender. Where it breaks: thin parts, glossy surfaces, interiors — the cases where you still need a human. The McLaren above is the real output of this pipeline.</p>
+        <p lang="ru">Практический пайплайн: одна фотография → геометрия в TripoSG → текстура в Hunyuan Paint → чистка и риг в Blender. Около 10 минут на модель на 5060 Ti. Где ломается: тонкие детали, глянцевые поверхности, салоны — там всё ещё нужен человек. McLaren выше — реальный результат этого пайплайна.</p>
+      </div>
+
+    </main>
+  </body>
+</html>

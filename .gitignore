@@ -8,6 +8,7 @@
 .vscode/
 *.swp
 *.swo
+.devin
 
 # OS
 Thumbs.db
@@ -20,3 +21,10 @@ Desktop.ini
 # Temp
 *.tmp
 *.bak
+
+# :-)
+.data/
+research/
+
+# Node modules
+node_modules/

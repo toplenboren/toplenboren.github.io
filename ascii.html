@@ -3,6 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>ASCII</title>
+        <style>
+            html, body { margin: 0; overflow: hidden; background: #fff; }
+            pre {
+                margin: 0;
+                padding: 8px;
+                font: 11px/1.25 "Courier New", monospace;
+                color: #333;
+                animation: drift 30s ease-in-out infinite alternate;
+            }
+            @keyframes drift {
+                from { transform: translateX(0); }
+                to   { transform: translateX(-160px); }
+            }
+            @media (prefers-reduced-motion: reduce) { pre { animation: none; } }
+        </style>
     </head>
     <body>
         <pre>
