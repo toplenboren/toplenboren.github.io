@@ -22,8 +22,9 @@ Desktop.ini
 *.tmp
 *.bak
 
-# Figma export data
+# :-)
 .data/
+research/
 
 # Node modules
 node_modules/
